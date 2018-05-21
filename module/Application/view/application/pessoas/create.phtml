@@ -1,0 +1,18 @@
+<h1>Create</h1>
+<form method="post">
+    <label>
+        Nome:
+        <input name="name" type="text" class="form-control">
+    </label>
+    <label>
+        E-mail:
+        <input name="email" type="text" class="form-control">
+        <?php foreach ($errors['email'] as $error) { ?>
+            <p style="color: red;"><?= $error ?></p>
+        <?php } ?>
+    </label>
+    <input name="id" type="hidden">
+
+    <input type="submit" class="btn btn-primary">
+
+</form>
